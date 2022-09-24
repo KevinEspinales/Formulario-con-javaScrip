@@ -1,139 +1,120 @@
 <!DOCTYPE html>
-<html lang="es-AR">
-<head>
-       <!-- CHARSET -->
-   <meta charset="UTF-8">
-   <!-- IE-EDGE -->
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <!-- VIEWPORT -->
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- TITTLE -->
-   <title>Kevin Espinales | Formulario</title>
- <!-- ICONS FONT AWESOME -->
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
- <!-- STYLES -->
- <link rel="stylesheet" href="Style.css">
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>PrograII - App Web</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="js/script.js"></script>
+    </head>
+    <body>  
+        <img src="js/logoMiumg3.png" align="center" alt=""/>
+        <img src="js/cabecera.jpg" align="center" alt=""/>
+        <img src="js/logoMiumg2.jpg" align="center" alt=""/>
+        
+        
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-</head>
-<body>
-<!-- MAIN -->
-<main>
-    <!-- FORMULARIO -->
-    <form action="#" class="formulario" id="formulario">
-        <!-- GRUPO DE USUARIO -->
-        <div class="formulario__grupo" id="grupo__usuario">
-            <label class="formulario__label">Nombre de usuario</label>
-            <div class="formulario__grupo-input">
-                <input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="Kevin_Espinales">
-                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
             </div>
-            <p class="formulario__input-error">El usuario debe tener minimo 4 caracteres y solo se admiten números, letras y guión bajo.</p>
-        </div>
-
-
-        <!-- GRUPO DE NOMBRE-->
-        <div class="formulario__grupo" id="grupo__nombre">
-            <label class="formulario__label">Nombre y Apellido</label>
-            <div class="formulario__grupo-input">
-                <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Kevin Espinales">
-                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>    
+    
+    
+    <div class="d-flex justify-content-around">
+        <div class="p-3 bd-highlight">
+        <h1>Formulario de Registro de Libros</h1>
+        <a href="NewServlet" > Click aqui </a><br><br>
+        <form method="POST" id="form" name="form" action="NewServlet" >
+            <div class="form-group">
+                <label for="exampleInputName">Codigo</label>
+                <input class="form-control" type="text" placeholder="ingresar codigo" name="codigo" id="codigo" >
+                <input type="hidden" name="control" value="GUARDAR">
             </div>
-            <p class="formulario__input-error">El nombre debe tener minimo 4 caracteres y solo se admiten números, letras y guión bajo.</p>
-        </div>
-
-
-        <!-- GRUPO DE CONTRASEÑA 1-->
-        <div class="formulario__grupo" id="grupo__password">
-            <label class="formulario__label">Contraseña</label>
-            <div class="formulario__grupo-input">
-                <input type="password" class="formulario__input" name="password" id="password">
-                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            <div class="form-group">
+                <label for="exampleInputName">Nombre del cliente</label>
+                <input class="form-control" type="text" placeholder="ingresar nombre" name="nombre"id="nombre" >
             </div>
-            <p class="formulario__input-error">La contraseña debe ser de 4 a 12 digitos</p>
-        </div>
-
-
-        <!-- GRUPO DE CONTRASEÑA 2-->
-        <div class="formulario__grupo" id="grupo__password2">
-            <label class="formulario__label">Repetir la contraseña</label>
-            <div class="formulario__grupo-input">
-                <input type="password" class="formulario__input" name="password2" id="password2">
-                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control"  aria-describedby="emailHelp" name="correo" id="correo"  >
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
-            <p class="formulario__input-error">La contraseña no coincide</p>
-        </div>
-
-
-        <!-- GRUPO DE EMAIL -->
-        <div class="formulario__grupo" id="grupo__correo">
-            <label class="formulario__label">Correo Electonico</label>
-            <div class="formulario__grupo-input">
-                <input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@Kevin.com">
-                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Direccion</label>
+              <input type="text" class="form-control"  name="direccion" id="direccion"  >
             </div>
-            <p class="formulario__input-error">El correo debe tener mÍnimo 4 caracteres y sólo se admiten números, letras y guión bajo.</p>
-        </div>
-
-
-        <!-- GRUPO DE TELÉFONO -->
-        <div class="formulario__grupo" id="grupo__telefono">
-            <label class="formulario__label">Teléfono</label>
-            <div class="formulario__grupo-input">
-                <input type="telefono" class="formulario__input" name="telefono" id="telefono" placeholder="0123456789">
-                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            
+             <div class="form-group">
+              <label for="exampleInputTelefono">Telefono</label>
+              <input type="text" class="form-control"  name="telefono" id="telefono"  >
             </div>
-            <p class="formulario__input-error">El número debe tener 8 digitos</p>
+            
+            <select class="form-control" name="opcion">
+                <option value="1">Opción 1</option>
+                <option value="2">Opción 2</option>
+            </select><br>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <button type="button" onclick="enviarFormularioOpcion2()" class="btn btn-success">Guardar con JS</button>
+             <button type="button" class="btn btn-danger">Cancelar</button>
+        </form>   
         </div>
+       <div class="p-3 bd-highlight">
+            <div class="container" id="container2">
+                <table class="table table-striped table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                             <td>Codigo de Cliente</td>
+                            <td>Nombre del Cliente</td>
+                             <td>Dirección</td>
+                            <td>Telefono</td>
+                            <td>Correo </td>
+                            <td>Tipo</td>
+                            <td>Acción</td>
+                        </tr>
+                    </thead>
+                    <tbody id="bodyTable">
 
-
-        <!-- GRUPO TERMINOS Y CONDICIONES -->
-        <div class="formulario__grupo formulario__grupo-terminos" id="grupo__terminos">
-            <label class="formulario__label">
-                <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
-                <b class="formulario__span">Acepto los terminos y condiciones</b>
-            </label>
+                    </tbody>                     
+                </table>
+            </div>
         </div>
-
-        <!-- MENSAJE DE CAMPOS REQUERIDOS -->
-        <div class="formulario__mensaje" id="formulario__mensaje">
-            <p><i class="fas fa-exclamation-circle"> <b>Error:</b> Debes completar todos los campos</i></p>
         </div>
-
-
-        <!-- GRUPO ENVIAR -->
-        <div class="formulario__grupo formulario__grupo-btn-enviar">
-            <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">El formulario se envió correctamente</p>
-            <input class="formulario__btn" type="submit" value="Enviar">
-        </div>
-    </form>
-</main>
-
-<div class="btn-fila">
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-        Datos del alumno
-    </button>
-</div>
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-    <div class="modal-content">
-        <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Datos del Alumno</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-                <p>Carné: <b>0909-20-11192</b>
-                <br>Nombre completo: <b>Kevin Alexander Espinales Ramirez</b>
-                <br>Fecha y hora de finalizacion: <b>01/09/2022 - 23:59</b>
-                <br>Nota esperada segun rendimiento: <b>2 pts.</b>
-                </p>
-        </div>
-        <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-    </div>
-    </div>
-</div>
-    <script src="App.js"></script>
-</body>
+    </body>
 </html>
